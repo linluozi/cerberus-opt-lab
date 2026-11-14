@@ -1,0 +1,89 @@
+{
+  "seed": 20261114,
+  "n_cases": 13000,
+  "n_distinct": 10807,
+  "n_skipped_generator_error": 2193,
+  "repeats_per_arm": 3,
+  "inner_validations": {
+    "tiny": 20,
+    "deep": 5,
+    "wide": 3,
+    "real": 1
+  },
+  "overall": {
+    "n": 10807,
+    "min": 1.2339760142549634,
+    "p1": 1.6561534065177796,
+    "p5": 1.7763593799181618,
+    "median": 3.050279867228715,
+    "max": 16.930129240710823,
+    "below_1_00": 0,
+    "below_1_10": 0
+  },
+  "by_class": {
+    "tiny": {
+      "n": 3250,
+      "min": 2.8129297879495754,
+      "p1": 3.092320609477011,
+      "p5": 4.575817173337629,
+      "median": 4.927271268719426,
+      "max": 7.336233181280783,
+      "below_1_00": 0,
+      "below_1_10": 0
+    },
+    "deep": {
+      "n": 3250,
+      "min": 1.2339760142549634,
+      "p1": 1.589410583834661,
+      "p5": 1.6849530433434883,
+      "median": 1.9318398912284307,
+      "max": 3.0075553547511586,
+      "below_1_00": 0,
+      "below_1_10": 0
+    },
+    "wide": {
+      "n": 3250,
+      "min": 2.080460547303014,
+      "p1": 2.490763982351851,
+      "p5": 2.6730048441356358,
+      "median": 3.2138673803678905,
+      "max": 6.920229032797943,
+      "below_1_00": 0,
+      "below_1_10": 0
+    },
+    "real": {
+      "n": 1057,
+      "min": 1.3935462372020437,
+      "p1": 1.6759602420959863,
+      "p5": 1.7683605038782446,
+      "median": 1.9149490412355772,
+      "max": 16.930129240710823,
+      "below_1_00": 0,
+      "below_1_10": 0
+    }
+  },
+  "worst_case": {
+    "cls": "deep",
+    "key": "7118f697759feeae1867019a2b8752260c8be7c885175ab4098f13e2baa948b9",
+    "ratio": 1.2339760142549634,
+    "schema_repr": "{'n3': {'type': 'dict', 'schema': {'n2': {'type': 'dict', 'schema': {'n1': {'type': 'dict', 'schema': {'leaf': {'type': 'integer', 'min': -1000000, 'max': 1000000}}}}}}}}",
+    "doc_repr": "{'n3': {'n2': {'n1': {'leaf': 651091}}}}"
+  },
+  "control_baseline_vs_baseline": {
+    "n": 824,
+    "min": 0.6872002400084457,
+    "p1": 0.9025045784469587,
+    "p5": 0.96885497703453,
+    "median": 1.0105922633490187,
+    "max": 1.4389856677380695,
+    "below_1_00": 232,
+    "below_1_10": 815,
+    "worst_case": {
+      "cls": "tiny",
+      "key": "990acf45d86a9beac1814bb95dc3e02131a9983da78a79623ba2ea1ef33eb1fc",
+      "ratio": 0.6872002400084457
+    }
+  },
+  "fallback_required": false,
+  "fallback_note": "The patch has no data-dependent dispatch: it only replaces DefinitionSchema.copy() with dict(schema) on a schema that was already expanded and validated once. No input can make it do more work than the baseline; the adversarial battery verifies the measured worst case."
+}

@@ -1,0 +1,19 @@
+diff --git a/cerberus/validator.py b/cerberus/validator.py
+index cf4952c..102ff57 100644
+--- a/cerberus/validator.py
++++ b/cerberus/validator.py
+@@ -690,7 +690,13 @@ class BareValidator(object):
+     def __normalize_mapping(self, mapping, schema):
+         if isinstance(schema, _str_type):
+             schema = self._resolve_schema(schema)
+-        schema = schema.copy()
++        if isinstance(schema, DefinitionSchema):
++            # A DefinitionSchema is expanded and validated on construction;
++            # a shallow dict copy is enough here, and avoids re-expanding and
++            # re-validating every field on every validate() call.
++            schema = dict(schema)
++        else:
++            schema = schema.copy()
+         for field in schema:
+             schema[field] = self._resolve_rules_set(schema[field])
+ 

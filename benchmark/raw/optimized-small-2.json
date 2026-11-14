@@ -1,0 +1,8 @@
+{
+  "impl": "optimized",
+  "scale": "small",
+  "n_docs": 500,
+  "sample": 2,
+  "seconds": 0.32462609838694334,
+  "seed": 20261114
+}

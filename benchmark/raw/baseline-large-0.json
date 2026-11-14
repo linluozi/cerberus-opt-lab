@@ -1,0 +1,8 @@
+{
+  "impl": "baseline",
+  "scale": "large",
+  "n_docs": 10000,
+  "sample": 0,
+  "seconds": 11.151233993470669,
+  "seed": 20261114
+}

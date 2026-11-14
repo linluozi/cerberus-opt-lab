@@ -1,0 +1,3 @@
+distinct cases: 1200 (dedup: sha256 of canonical (schema, document))
+byte-identical sha256 matches: 1200/1200
+mismatches: 0

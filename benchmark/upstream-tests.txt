@@ -1,0 +1,8 @@
+# G1: fresh clone of upstream at base commit 83f5dada76aa3179ef21b677a7f4235bf20c1566
+# command: git clone --depth=1 git@github.com:pyeve/cerberus.git upstream && cd upstream && git apply ../patch.diff && python -m pytest cerberus/tests -q
+
+pytest 9.2.0
+........................................................................ [ 58%]
+............................................................s........... [ 87%]
+...............................                                          [100%]
+246 passed, 1 skipped in 0.68s
